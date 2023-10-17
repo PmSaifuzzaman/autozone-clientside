@@ -14,7 +14,7 @@ const Navbar = () => {
                         <li>
                             <NavLink to="/"
                                 className={({ isActive, isPending }) =>
-                                    isPending ? "pending" : isActive ? "text-red-400 underline font-medium" : ""
+                                    isPending ? "pending" : isActive ? "text-sky-400 underline font-medium" : ""
                                 }>
                                 Home
                             </NavLink>
@@ -22,7 +22,7 @@ const Navbar = () => {
                         <li>
                             <NavLink to={"/addProduct"}
                                 className={({ isActive, isPending }) =>
-                                    isPending ? "pending" : isActive ? "text-red-400 underline font-medium" : ""
+                                    isPending ? "pending" : isActive ? "text-sky-400 underline font-medium" : ""
                                 }>
                                 Add Product
                             </NavLink>
@@ -30,7 +30,7 @@ const Navbar = () => {
                         <li>
                             <NavLink to={"/blog"}
                                 className={({ isActive, isPending }) =>
-                                    isPending ? "pending" : isActive ? "text-red-400 underline font-medium" : ""
+                                    isPending ? "pending" : isActive ? "text-sky-400 underline font-medium" : ""
                                 }>
                                 Blog
                             </NavLink>
@@ -38,7 +38,7 @@ const Navbar = () => {
                         <li>
                             <NavLink to={"/cart"}
                                 className={({ isActive, isPending }) =>
-                                    isPending ? "pending" : isActive ? "text-red-400 underline font-medium" : ""
+                                    isPending ? "pending" : isActive ? "text-sky-400 underline font-medium" : ""
                                 }>
                                 My Cart
                             </NavLink>
@@ -52,7 +52,7 @@ const Navbar = () => {
                     <li>
                         <NavLink to="/"
                             className={({ isActive, isPending }) =>
-                                isPending ? "pending" : isActive ? "text-red-400 underline font-medium" : ""
+                                isPending ? "pending" : isActive ? "text-sky-400 underline font-medium" : ""
                             }>
                             Home
                         </NavLink>
@@ -60,7 +60,7 @@ const Navbar = () => {
                     <li>
                         <NavLink to={"/addProduct"}
                             className={({ isActive, isPending }) =>
-                                isPending ? "pending" : isActive ? "text-red-400 underline font-medium" : ""
+                                isPending ? "pending" : isActive ? "text-sky-400 underline font-medium" : ""
                             }>
                             Add Product
                         </NavLink>
@@ -68,7 +68,7 @@ const Navbar = () => {
                     <li>
                         <NavLink to={"/blog"}
                             className={({ isActive, isPending }) =>
-                                isPending ? "pending" : isActive ? "text-red-400 underline font-medium" : ""
+                                isPending ? "pending" : isActive ? "text-sky-400 underline font-medium" : ""
                             }>
                             Blog
                         </NavLink>
@@ -76,7 +76,7 @@ const Navbar = () => {
                     <li>
                         <NavLink to={"/cart"}
                             className={({ isActive, isPending }) =>
-                                isPending ? "pending" : isActive ? "text-red-400 underline font-medium" : ""
+                                isPending ? "pending" : isActive ? "text-sky-400 underline font-medium" : ""
                             }>
                             My Cart
                         </NavLink>
@@ -84,7 +84,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Log in</a>
+                <Link className="btn">Log in</Link>
             </div>
         </div>
     );
