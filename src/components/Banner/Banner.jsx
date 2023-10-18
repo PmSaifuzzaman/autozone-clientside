@@ -7,7 +7,7 @@ const Banner = () => {
             <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-md">
                     <h1 className="mb-5 text-5xl font-bold">AUTO<span className="text-sky-400">ZONE</span></h1>
-                    <p className="mb-5 text-4xl text-white">Find your perfect car</p>
+                    <p className="mb-5 text-4xl text-white font-serif">Welcome to AutoZone - Your Trusted Partner in the World of Automobiles!</p>
                 </div>
             </div>
         </div>

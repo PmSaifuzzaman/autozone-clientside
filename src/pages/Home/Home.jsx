@@ -3,6 +3,7 @@ import Banner from "../../components/Banner/Banner";
 import Navbar from "../../components/Navbar/Navbar";
 import BrandCard from "../../components/BrandCard/BrandCard";
 import Dealership from "../../components/Dealership/Dealership";
+import AboutUs from "../../components/AboutUs/AboutUs";
 
 
 const Home = () => {
@@ -19,6 +20,7 @@ const Home = () => {
                 }
             </div>
             <Dealership></Dealership>
+            <AboutUs></AboutUs>
         </div>
     );
 };

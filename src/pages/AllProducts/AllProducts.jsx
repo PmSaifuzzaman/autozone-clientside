@@ -12,10 +12,6 @@ const AllProducts = () => {
     const { brandName } = useParams();
     const [products, setProducts] = useState([]);
 
-
-    // const allproducts = useLoaderData()
-    // console.log(allproducts)
-
     useEffect(() => {
 
         const lowerCaseBrandName = brandName.toLowerCase();
