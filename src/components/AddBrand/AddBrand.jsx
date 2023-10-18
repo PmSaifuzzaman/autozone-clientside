@@ -41,7 +41,7 @@ const AddBrand = () => {
 
     return (
         <div className="bg-[#F4F3F0] p-10">
-            <h2 className="text-3xl font-extrabold text-center pb-4">Add a Product</h2>
+            <h2 className="text-3xl font-extrabold text-center pb-4">Add a Brand</h2>
             <form onSubmit={handleAddBrand}>
                 {/* form name and brand name row */}
                 <div className="md:flex mb-8">
