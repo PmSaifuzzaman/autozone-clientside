@@ -1,19 +1,47 @@
-import { useLoaderData } from "react-router-dom";
+
+
+import { useEffect, useState } from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import ProductCard from "../ProductCard/ProductCard";
+import { useParams } from "react-router-dom";
+// import { useEffect } from "react";
 
 
 const AllProducts = () => {
 
-    const allproducts = useLoaderData()
-    console.log(allproducts)
+    const { brandName } = useParams();
+    const [products, setProducts] = useState([]);
+
+
+    // const allproducts = useLoaderData()
+    // console.log(allproducts)
+
+    useEffect(() => {
+
+        const lowerCaseBrandName = brandName.toLowerCase();
+        fetch(`http://localhost:5000/products/${lowerCaseBrandName}`)
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error('Network response was not ok');
+            }
+            return response.json();
+          })
+          .then((data) => {
+            // Handle the data, set it in the state
+            setProducts(data);
+          })
+          .catch((error) => {
+            console.error('Error fetching data:', error);
+          });
+      }, [brandName]);
 
     return (
         <div>
             <Navbar></Navbar>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+            <h2 className="text-center text-4xl font-bold my-10  text-sky-400">Our {brandName} Collection</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                 {
-                    allproducts.map(product => <ProductCard key={product._id} product={product}></ProductCard>)
+                    products?.map(product => <ProductCard key={product._id} product={product}></ProductCard>)
                 }
             </div>
         </div>
