@@ -20,6 +20,14 @@ const Navbar = () => {
                             </NavLink>
                         </li>
                         <li>
+                            <NavLink to="/addBrand"
+                                className={({ isActive, isPending }) =>
+                                    isPending ? "pending" : isActive ? "text-sky-400 underline font-medium" : ""
+                                }>
+                                Add Brand
+                            </NavLink>
+                        </li>
+                        <li>
                             <NavLink to={"/addProduct"}
                                 className={({ isActive, isPending }) =>
                                     isPending ? "pending" : isActive ? "text-sky-400 underline font-medium" : ""
@@ -55,6 +63,14 @@ const Navbar = () => {
                                 isPending ? "pending" : isActive ? "text-sky-400 underline font-medium" : ""
                             }>
                             Home
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/addBrand"
+                            className={({ isActive, isPending }) =>
+                                isPending ? "pending" : isActive ? "text-sky-400 underline font-medium" : ""
+                            }>
+                            Add Brand
                         </NavLink>
                     </li>
                     <li>
