@@ -1,5 +1,6 @@
 import { FaCarAlt, FaMailBulk, FaPhone } from 'react-icons/fa';
 import Navbar from '../Navbar/Navbar';
+import Footer from '../Footer/Footer';
 
 const Contact = () => {
     return (
@@ -20,6 +21,7 @@ const Contact = () => {
                 <h2 className="font-bold text-3xl">Email Us</h2>
                 <p>auto@Zone.com or autoZone@gmail.com</p>
             </div>
+            <Footer></Footer>
         </div>
     );
 };

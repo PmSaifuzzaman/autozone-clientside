@@ -4,6 +4,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import BrandCard from "../../components/BrandCard/BrandCard";
 import Dealership from "../../components/Dealership/Dealership";
 import AboutUs from "../../components/AboutUs/AboutUs";
+import Footer from "../../components/Footer/Footer";
 
 
 const Home = () => {
@@ -21,6 +22,7 @@ const Home = () => {
             </div>
             <Dealership></Dealership>
             <AboutUs></AboutUs>
+            <Footer></Footer>
         </div>
     );
 };

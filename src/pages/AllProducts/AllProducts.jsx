@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import ProductCard from "../ProductCard/ProductCard";
 import { useParams } from "react-router-dom";
+import Footer from "../../components/Footer/Footer";
 // import { useEffect } from "react";
 
 
@@ -40,6 +41,7 @@ const AllProducts = () => {
                     products?.map(product => <ProductCard key={product._id} product={product}></ProductCard>)
                 }
             </div>
+            <Footer></Footer>
         </div>
     );
 };

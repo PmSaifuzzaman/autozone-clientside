@@ -8,6 +8,7 @@ import AddBrand from "../components/AddBrand/AddBrand";
 import AllProducts from "../pages/AllProducts/AllProducts";
 import UpdateProduct from "../components/UpdateProduct/UpdateProduct";
 import Contact from "../components/Contact/Contact";
+import Blog from "../pages/Blog/Blog";
 
 
 const router = createBrowserRouter([
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
             {
                 path: "/contact",
                 element: <Contact></Contact>
+            },
+            {
+                path:"/blog",
+                element: <Blog></Blog>
             }
         ]
     },
