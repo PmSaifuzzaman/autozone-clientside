@@ -51,6 +51,14 @@ const Navbar = () => {
                                 My Cart
                             </NavLink>
                         </li>
+                        <li>
+                            <NavLink to={"/contact"}
+                                className={({ isActive, isPending }) =>
+                                    isPending ? "pending" : isActive ? "text-sky-400 underline font-medium" : ""
+                                }>
+                                Contact Us
+                            </NavLink>
+                        </li>
                     </ul>
                 </div>
                 <Link><img className="h-24" src={logo} alt="" /></Link>
@@ -95,6 +103,14 @@ const Navbar = () => {
                                 isPending ? "pending" : isActive ? "text-sky-400 underline font-medium" : ""
                             }>
                             My Cart
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to={"/contact"}
+                            className={({ isActive, isPending }) =>
+                                isPending ? "pending" : isActive ? "text-sky-400 underline font-medium" : ""
+                            }>
+                            Contact Us
                         </NavLink>
                     </li>
                 </ul>

@@ -17,7 +17,7 @@ const AboutUs = () => {
                     <li className="py-4"> Highest standards of quality, safety, and performance</li>
                     <li> Offering you the latest features and cutting-edge innovations</li>
                     <li className="py-4"> Impressive after-sales support</li>
-                        <Link className="btn bg-sky-400 text-white my-3">Contact Us</Link>
+                        <Link to={'/contact'} className="btn bg-sky-400 text-white my-3">Contact Us</Link>
                     </div>
                 </div>
             </div>
