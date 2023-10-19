@@ -5,6 +5,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import ProductCard from "../ProductCard/ProductCard";
 import { useParams } from "react-router-dom";
 import Footer from "../../components/Footer/Footer";
+import Advertisment from "../../components/Advertisement/Advertisment";
 // import { useEffect } from "react";
 
 
@@ -35,6 +36,7 @@ const AllProducts = () => {
     return (
         <div>
             <Navbar></Navbar>
+            <Advertisment></Advertisment>
             <h2 className="text-center text-4xl font-bold my-10  text-sky-400">Our {brandName} Collection</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                 {
