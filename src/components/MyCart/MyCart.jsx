@@ -13,9 +13,12 @@ const MyCart = () => {
     const [cartProducts, setCartProducts] = useState([]);
     const [cartProductsFound, setCartProductsFound] = useState(true);
 
+
+
+
     useEffect(() => {
 
-          const lowerCaseUserEmail = userEmail.toLowerCase();
+        const lowerCaseUserEmail = userEmail.toLowerCase();
         //   fetch(`http://localhost:5000/products/${lowerCaseBrandName}`)
         fetch(`http://localhost:5000/cartProducts/${lowerCaseUserEmail}`)
             .then((response) => {
@@ -45,7 +48,13 @@ const MyCart = () => {
             <div>
                 {cartProductsFound ? (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-                        {cartProducts?.map(cartProduct => <CartProductCard key={cartProduct._id} cartProduct={cartProduct}></CartProductCard>)}
+                        {cartProducts?.map(cartProduct => <CartProductCard
+                            key={cartProduct._id}
+                            cartProduct={cartProduct}
+                            cartProducts={cartProducts}
+                            setCartProducts={setCartProducts}
+                        >
+                        </CartProductCard>)}
                     </div>
                 ) : (
                     <div>
