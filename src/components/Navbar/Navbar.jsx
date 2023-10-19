@@ -11,6 +11,8 @@ const Navbar = () => {
 
     // Access Context api
     const { logOut,user } = useContext(authContext);
+    
+    const email = user ? user.email : null;
 
     const auth = getAuth()
 
@@ -24,10 +26,6 @@ const Navbar = () => {
                 toast('Cannot log out')
             })
     }
-
-
-
-
 
 
     return (
@@ -71,7 +69,7 @@ const Navbar = () => {
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to={"/cart"}
+                            <NavLink to={`/cartProducts/${email}`}
                                 className={({ isActive, isPending }) =>
                                     isPending ? "pending" : isActive ? "text-sky-400 underline font-medium" : ""
                                 }>
@@ -125,7 +123,7 @@ const Navbar = () => {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to={"/cart"}
+                        <NavLink to={`/cartProducts/${email}`}
                             className={({ isActive, isPending }) =>
                                 isPending ? "pending" : isActive ? "text-sky-400 underline font-medium" : ""
                             }>

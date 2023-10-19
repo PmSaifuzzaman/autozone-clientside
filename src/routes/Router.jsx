@@ -18,6 +18,8 @@ import MyCart from "../components/MyCart/MyCart";
 
 
 const router = createBrowserRouter([
+
+
     {
         path: "/",
         element: <Root></Root>,
@@ -62,7 +64,7 @@ const router = createBrowserRouter([
                 loader: ({params}) => fetch(`http://localhost:5000/product/${params.id}`)
             },
             {
-                path: "/cart",
+                path: "/cartProducts/:userEmail",
                 element: <MyCart></MyCart>
             },
             {

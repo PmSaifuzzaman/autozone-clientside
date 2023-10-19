@@ -60,7 +60,7 @@ const Details = () => {
                     <p className="text-xl">Price: {price}</p>
                     <p><span className="text-xl font-bold">Details:</span> {details}</p>
                     <div className="card-actions">
-                        <Link onClick={handleAddtoCart}  to={'/cart'} className="btn bg-sky-400 text-white mt-2">Add to Cart</Link>
+                        <Link onClick={handleAddtoCart}  to={`/cartProducts/${useremail}`} className="btn bg-sky-400 text-white mt-2">Add to Cart</Link>
                     </div>
                 </div>
             </div>
