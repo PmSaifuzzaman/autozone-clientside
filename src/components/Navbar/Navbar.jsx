@@ -1,8 +1,35 @@
 import { Link, NavLink } from "react-router-dom";
-import  logo  from "../../assets/images/logo-without-bg.png"
+import logo from "../../assets/images/logo-without-bg.png"
+import { useContext } from "react";
+import { authContext } from "../../providers/AuthProvider";
+import { getAuth } from "firebase/auth";
+import { ToastContainer, toast } from "react-toastify";
+import userDefaultPhoto from "../../assets/images/cars/user.png"
 
 
 const Navbar = () => {
+
+    // Access Context api
+    const { logOut,user } = useContext(authContext);
+
+    const auth = getAuth()
+
+    // Log out messege
+    const handleLogOut = () => {
+        logOut(auth)
+            .then(() => {
+                toast('Log out Successfully')
+            })
+            .catch(() => {
+                toast('Cannot log out')
+            })
+    }
+
+
+
+
+
+
     return (
         <div className="navbar bg-base-100">
             <div className="navbar-start">
@@ -115,8 +142,30 @@ const Navbar = () => {
                     </li>
                 </ul>
             </div>
+            {/* <div className="navbar-end">
+                <Link className="btn" to={"/login"}>Login</Link>
+            </div> */}
             <div className="navbar-end">
-                <Link className="btn">Log in</Link>
+                {
+                    user && <p>{user?.displayName}</p>
+                }
+                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                    <div >
+                        {
+                            user ? <div>
+                                <img className="w-10 rounded-full" src={user.photoURL} alt="" />
+                            </div>
+                                :
+                                <img src={userDefaultPhoto} />
+                        }
+                    </div>
+                </label>
+                {
+                    user ? <button onClick={handleLogOut} className="btn">LogOut</button>
+                        :
+                        <Link className="btn" to={"/login"}>Login</Link>
+                }
+                <ToastContainer></ToastContainer>
             </div>
         </div>
     );
