@@ -8,6 +8,7 @@ import { useContext, useState } from "react";
 import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
 import app from '../../firebase/firebase.config';
 import { authContext } from '../../providers/AuthProvider';
+import Navbar from '../../components/Navbar/Navbar';
 
 
 
@@ -95,7 +96,7 @@ const Register = () => {
 
     return (
         <div>
-
+            <Navbar></Navbar>
             <div className="bg-slate-300">
                 <h2 className="text-center mt-10 pt-8 text-4xl font-semibold">Register your account </h2>
                 <form onSubmit={handleRegister} className="card-body md:w-3/4 lg:w-1/2 mx-auto">

@@ -13,6 +13,7 @@ import Details from "../components/Details/Details";
 import ErrorPage from "../components/ErrorPage/ErrorPage";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
+import PrivateRoute from "./PrivateRoute";
 
 
 const router = createBrowserRouter([
@@ -43,20 +44,20 @@ const router = createBrowserRouter([
             },
             {
                 path: "/addBrand",
-                element: <AddBrand></AddBrand>
+                element: <PrivateRoute><AddBrand></AddBrand></PrivateRoute>
             },
             {
                 path: "/addProduct",
-                element: <AddProduct></AddProduct>
+                element: <PrivateRoute><AddProduct></AddProduct></PrivateRoute>
             },
             {
                 path: "/updateProduct/:id",
-                element: <UpdateProduct></UpdateProduct>,
+                element: <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
                 loader: ({params}) => fetch(`http://localhost:5000/product/${params.id}`)
             },
             {
                 path: "/detailsProduct/:id",
-                element: <Details></Details>,
+                element: <PrivateRoute><Details></Details></PrivateRoute>,
                 loader: ({params}) => fetch(`http://localhost:5000/product/${params.id}`)
             },
             {

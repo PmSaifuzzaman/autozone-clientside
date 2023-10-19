@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import { useContext, useState } from "react";
 import { authContext } from '../../providers/AuthProvider';
+import Navbar from '../../components/Navbar/Navbar';
 
 
 
@@ -48,7 +49,7 @@ const Login = () => {
     }
     return (
         <div>
-
+            <Navbar></Navbar>
             <div className="bg-slate-300">
                 <h2 className="text-center mt-10 pt-8 text-4xl font-semibold">Login your account </h2>
                 <form onSubmit={handleLogIn} className="card-body md:w-3/4 lg:w-1/2 mx-auto">
