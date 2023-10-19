@@ -65,7 +65,7 @@ const Login = () => {
                         <input type="password" placeholder="password" name="password" className="input input-bordered" required />
                     </div>
                     <div className="form-control mt-6">
-                        <button className="btn bg-red-400 text-white">Login</button>
+                        <button className="btn bg-sky-400 text-white">Login</button>
                     </div>
                 </form>
                 
@@ -76,7 +76,7 @@ const Login = () => {
                 {
                     LoginSuccess && toast("Login Successfully")
                 }
-                <p className="text-center pb-8">Do not Have An Account ? <Link className="underline text-red-500 font-semibold" to={"/register"}>Register</Link></p>
+                <p className="text-center pb-8">Do not Have An Account ? <Link className="underline text-sky-400 font-semibold" to={"/register"}>Register</Link></p>
             </div>
         </div>
     );
