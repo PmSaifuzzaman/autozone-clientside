@@ -9,6 +9,7 @@ import AllProducts from "../pages/AllProducts/AllProducts";
 import UpdateProduct from "../components/UpdateProduct/UpdateProduct";
 import Contact from "../components/Contact/Contact";
 import Blog from "../pages/Blog/Blog";
+import Details from "../components/Details/Details";
 
 
 const router = createBrowserRouter([
@@ -40,6 +41,11 @@ const router = createBrowserRouter([
             {
                 path: "/updateProduct/:id",
                 element: <UpdateProduct></UpdateProduct>,
+                loader: ({params}) => fetch(`http://localhost:5000/product/${params.id}`)
+            },
+            {
+                path: "/detailsProduct/:id",
+                element: <Details></Details>,
                 loader: ({params}) => fetch(`http://localhost:5000/product/${params.id}`)
             },
             {

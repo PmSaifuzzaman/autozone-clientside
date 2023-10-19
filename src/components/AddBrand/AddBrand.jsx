@@ -1,4 +1,5 @@
 import Swal from "sweetalert2";
+import Navbar from "../Navbar/Navbar";
 
 
 const AddBrand = () => {
@@ -40,61 +41,64 @@ const AddBrand = () => {
     }
 
     return (
-        <div className="bg-[#F4F3F0] p-10">
-            <h2 className="text-3xl font-extrabold text-center pb-4">Add a Brand</h2>
-            <form onSubmit={handleAddBrand}>
-                {/* form name and brand name row */}
-                <div className="md:flex mb-8">
-                    <div className="form-control md:w-1/2">
-                        <label className="label">
-                            <span className="label-text">Name</span>
-                        </label>
-                        <label className="input-group">
-                            <input type="text" name="name" placeholder="Product Name" className="input input-bordered w-full" />
-                        </label>
+        <div>
+            <Navbar></Navbar>
+            <div className="bg-[#F4F3F0] p-10">
+                <h2 className="text-3xl font-extrabold text-center pb-4">Add a Brand</h2>
+                <form onSubmit={handleAddBrand}>
+                    {/* form name and brand name row */}
+                    <div className="md:flex mb-8">
+                        <div className="form-control md:w-1/2">
+                            <label className="label">
+                                <span className="label-text">Name</span>
+                            </label>
+                            <label className="input-group">
+                                <input type="text" name="name" placeholder="Product Name" className="input input-bordered w-full" />
+                            </label>
+                        </div>
+                        <div className="form-control md:w-1/2 ml-4">
+                            <label className="label">
+                                <span className="label-text">Brand Name</span>
+                            </label>
+                            <label className="input-group">
+                                <input type="text" name="brand" placeholder="Brand" className="input input-bordered w-full" />
+                            </label>
+                        </div>
                     </div>
-                    <div className="form-control md:w-1/2 ml-4">
-                        <label className="label">
-                            <span className="label-text">Brand Name</span>
-                        </label>
-                        <label className="input-group">
-                            <input type="text" name="brand" placeholder="Brand" className="input input-bordered w-full" />
-                        </label>
+                    {/* form rating and details row */}
+                    <div className="md:flex mb-8">
+                        <div className="form-control md:w-1/2">
+                            <label className="label">
+                                <span className="label-text">Ratings</span>
+                            </label>
+                            <label className="input-group">
+                                <input type="text" name="ratings" placeholder="Ratings" className="input input-bordered w-full" />
+                            </label>
+                        </div>
+                        <div className="form-control md:w-1/2 ml-4">
+                            <label className="label">
+                                <span className="label-text">Details</span>
+                            </label>
+                            <label className="input-group">
+                                <input type="text" name="details" placeholder="Details" className="input input-bordered w-full" />
+                            </label>
+                        </div>
                     </div>
-                </div>
-                {/* form rating and details row */}
-                <div className="md:flex mb-8">
-                    <div className="form-control md:w-1/2">
-                        <label className="label">
-                            <span className="label-text">Ratings</span>
-                        </label>
-                        <label className="input-group">
-                            <input type="text" name="ratings" placeholder="Ratings" className="input input-bordered w-full" />
-                        </label>
+                    {/* form Photo url row */}
+                    <div className="mb-8">
+                        <div className="form-control w-full">
+                            <label className="label">
+                                <span className="label-text">Photo URL</span>
+                            </label>
+                            <label className="input-group">
+                                <input type="text" name="photo" placeholder="Brand Logo URL" className="input input-bordered w-full" />
+                            </label>
+                        </div>
                     </div>
-                    <div className="form-control md:w-1/2 ml-4">
-                        <label className="label">
-                            <span className="label-text">Details</span>
-                        </label>
-                        <label className="input-group">
-                            <input type="text" name="details" placeholder="Details" className="input input-bordered w-full" />
-                        </label>
-                    </div>
-                </div>
-                {/* form Photo url row */}
-                <div className="mb-8">
-                    <div className="form-control w-full">
-                        <label className="label">
-                            <span className="label-text">Photo URL</span>
-                        </label>
-                        <label className="input-group">
-                            <input type="text" name="photo" placeholder="Brand Logo URL" className="input input-bordered w-full" />
-                        </label>
-                    </div>
-                </div>
-                <input type="submit" value="Add Brand" className="btn btn-block bg-sky-400 text-white" />
+                    <input type="submit" value="Add Brand" className="btn btn-block bg-sky-400 text-white" />
 
-            </form>
+                </form>
+            </div>
         </div>
     );
 };
