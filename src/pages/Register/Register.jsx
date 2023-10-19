@@ -124,7 +124,7 @@ const Register = () => {
                         <input type="password" placeholder="Enter password" name="password" className="input input-bordered" required />
                     </div>
                     <div className="form-control mt-6">
-                        <button className="btn bg-red-400 text-white">Register</button>
+                        <button className="btn bg-sky-400 text-white">Register</button>
                     </div>
                 </form>
                 <ToastContainer></ToastContainer>
@@ -135,8 +135,8 @@ const Register = () => {
                 {
                     registerSuccess && toast("User created Successfully")
                 }
-                <div className='flex items-center justify-center pb-2'><button onClick={handleGoogleLogin} className='btn text-red-400'> <FaGoogle></FaGoogle> Log in with google</button></div>
-                <p className="text-center pb-4">Already Have An Account ? <Link className="underline text-blue-500 font-semibold" to={"/login"}>Login</Link></p>
+                <div className='flex items-center justify-center pb-2'><button onClick={handleGoogleLogin} className='btn text-sky-400'> <FaGoogle></FaGoogle> Log in with google</button></div>
+                <p className="text-center pb-4">Already Have An Account ? <Link className="underline text-sky-400 font-semibold" to={"/login"}>Login</Link></p>
             </div>
         </div>
     );
