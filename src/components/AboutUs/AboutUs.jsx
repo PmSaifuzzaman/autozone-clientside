@@ -8,7 +8,7 @@ const AboutUs = () => {
                 
             <div className="hero bg-white shadow-xl  p-10">
                 <div className="hero-content flex-col lg:flex-row-reverse">
-                    <img src={image5} className="max-w-sm rounded-lg shadow-2xl" />
+                    <img src={image5} className="md:max-w-sm rounded-lg shadow-2xl" />
                     <div>
                     <p className="text-2xl font-serif">Welcome to Auto<span className="text-sky-400 font-semibold">Zone</span> - Your Trusted Partner in the World of Automobiles!</p>
                     <br />
