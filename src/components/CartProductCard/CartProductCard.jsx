@@ -20,7 +20,7 @@ const CartProductCard = ({ cartProduct, cartProducts, setCartProducts }) => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/cartProduct/${_id}`,{
+                fetch(`https://autozone-server-n9pqjnvg2-saifuzzamans-projects.vercel.app/cartProduct/${_id}`,{
                     method: 'DELETE'
                 })
                     .then(res => res.json())

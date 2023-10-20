@@ -28,7 +28,7 @@ const UpdateProduct = () => {
 
         // Send data to server
 
-        fetch(`http://localhost:5000/product/${_id}`, {
+        fetch(`https://autozone-server-n9pqjnvg2-saifuzzamans-projects.vercel.app/product/${_id}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json",

@@ -18,7 +18,7 @@ const AddBrand = () => {
 
         const newBrand = { name, brand, ratings, details, photo }
         // Send data to Server side for brands
-        fetch("http://localhost:5000/brands", {
+        fetch("https://autozone-server-n9pqjnvg2-saifuzzamans-projects.vercel.app/brands", {
             method: "POST",
             headers: {
                 "content-type": "application/json",

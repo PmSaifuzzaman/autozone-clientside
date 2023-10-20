@@ -28,13 +28,13 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:5000/brands')
+                loader: () => fetch('https://autozone-server-n9pqjnvg2-saifuzzamans-projects.vercel.app/brands')
             },
             {
                 // path: "/allProducts", 
                 path: '/products/:brandName',
                 element: <AllProducts />,
-                // loader: ({params}) => fetch(`http://localhost:5000/products/${params.brandName}`)
+                // loader: ({params}) => fetch(`https://autozone-server-n9pqjnvg2-saifuzzamans-projects.vercel.app/products/${params.brandName}`)
 
             },
             {
@@ -56,12 +56,12 @@ const router = createBrowserRouter([
             {
                 path: "/updateProduct/:id",
                 element: <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/product/${params.id}`)
+                loader: ({params}) => fetch(`https://autozone-server-n9pqjnvg2-saifuzzamans-projects.vercel.app/product/${params.id}`)
             },
             {
                 path: "/detailsProduct/:id",
                 element: <PrivateRoute><Details></Details></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/product/${params.id}`)
+                loader: ({params}) => fetch(`https://autozone-server-n9pqjnvg2-saifuzzamans-projects.vercel.app/product/${params.id}`)
             },
             {
                 path: "/cartProducts/:userEmail",

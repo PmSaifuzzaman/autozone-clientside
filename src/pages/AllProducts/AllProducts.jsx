@@ -17,7 +17,7 @@ const AllProducts = () => {
   useEffect(() => {
 
     const lowerCaseBrandName = brandName.toLowerCase();
-    fetch(`http://localhost:5000/products/${lowerCaseBrandName}`)
+    fetch(`https://autozone-server-n9pqjnvg2-saifuzzamans-projects.vercel.app/products/${lowerCaseBrandName}`)
       .then((response) => {
         if (!response.ok) {
           throw new Error('Network response was not ok');

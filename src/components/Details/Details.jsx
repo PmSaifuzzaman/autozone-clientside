@@ -21,7 +21,7 @@ const Details = () => {
         const newCartProduct = { name, brand, type, price, ratings, details, photo, useremail}
         console.log(newCartProduct)
 
-        fetch("http://localhost:5000/cartProducts", {
+        fetch("https://autozone-server-n9pqjnvg2-saifuzzamans-projects.vercel.app/cartProducts", {
             method: "POST",
             headers: {
                 "content-type": "application/json",

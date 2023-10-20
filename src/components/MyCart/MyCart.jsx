@@ -19,7 +19,7 @@ const MyCart = () => {
     useEffect(() => {
 
         const lowerCaseUserEmail = userEmail.toLowerCase();
-        fetch(`http://localhost:5000/cartProducts/${lowerCaseUserEmail}`)
+        fetch(`https://autozone-server-n9pqjnvg2-saifuzzamans-projects.vercel.app/cartProducts/${lowerCaseUserEmail}`)
             .then((response) => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
