@@ -19,7 +19,6 @@ const MyCart = () => {
     useEffect(() => {
 
         const lowerCaseUserEmail = userEmail.toLowerCase();
-        //   fetch(`http://localhost:5000/products/${lowerCaseBrandName}`)
         fetch(`http://localhost:5000/cartProducts/${lowerCaseUserEmail}`)
             .then((response) => {
                 if (!response.ok) {
