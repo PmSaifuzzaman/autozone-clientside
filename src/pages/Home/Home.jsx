@@ -9,6 +9,7 @@ import Footer from "../../components/Footer/Footer";
 
 
 const Home = () => {
+    
     const brands = useLoaderData()
 
     return (
