@@ -39,6 +39,7 @@ const AddProduct = () => {
                         icon: 'success',
                         confirmButtonText: 'Cool'
                     })
+                    event.target.reset();
                 }
             });
 

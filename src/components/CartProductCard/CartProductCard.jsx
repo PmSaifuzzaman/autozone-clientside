@@ -63,6 +63,6 @@ export default CartProductCard;
 
 CartProductCard.propTypes = {
     cartProduct: PropTypes.object,
-    cartProducts: PropTypes.object,
-    setCartProducts: PropTypes.array,
+    cartProducts: PropTypes.array,
+    setCartProducts: PropTypes.func,
 };

@@ -45,6 +45,7 @@ const UpdateProduct = () => {
                         icon: 'success',
                         confirmButtonText: 'Cool'
                     })
+                    event.target.reset();
                 }
             });
 

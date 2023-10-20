@@ -35,6 +35,7 @@ const AddBrand = () => {
                         icon: 'success',
                         confirmButtonText: 'Cool'
                     })
+                    event.target.reset();
                 }
             });
 
